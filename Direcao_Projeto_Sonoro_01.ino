@@ -29,21 +29,17 @@ void loop() {
     if (digitalRead(BOT1) == LOW) {        //Configura o BOT1 como acionado
       if (opt == '1')
       {
-        //wtv020sd16p.playVoice(0);      //Reproduz o arquivo 1
+           //Reproduz o arquivo 1
         wtv020sd16p.asyncPlayVoice(0);
-        //delay(15000);
-        //wtv020sd16p.setVolume(8);
-        //delay(2000);
+      
         wtv020sd16p.stopVoice();
         delay(200);
         opt = '2';
         Serial.println(opt);
       } else {
-        //wtv020sd16p.playVoice(1);      //Reproduz o arquivo 2
+           //Reproduz o arquivo 2
         wtv020sd16p.asyncPlayVoice(1);
-        //delay(15000);
-        //wtv020sd16p.setVolume(8);
-        //delay(2000);
+    
         wtv020sd16p.stopVoice();
         delay(200);
         opt = '1';
